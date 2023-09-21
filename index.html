@@ -6,8 +6,11 @@
     <title>.</title>
 </head>
 <body>
-    <button onclick="openPopup(),openPopup()">
+    <button onclick="openPopup()">
         <h1>monkey dance</h1>
+    </button>
+    <button onclick="openPopup1()">
+        <h1>bonkey</h1>
     </button>
     <img src="the-rock-look.gif" alt="The Rock GIF">
 
@@ -18,7 +21,13 @@
                 alert('Popup blocked! Please allow pop-ups for this site and try again.');
             }
         }
-    </script>
+        function openPopup1() {
+            var popupWindow = window.open('https:google.com', 'website', 'width=600,height=400');
+            if (!popupWindow) {
+                alert('Popup blocked! Please allow pop-ups for this site and try again.');
+            }
+        }
+    </script>   
     <p>THIS IS ONLY FOR HALARIOUS RESONS</p>
     <P>PLEASE DONT TAKE IT SERIOUSLY</P>
 </body>
