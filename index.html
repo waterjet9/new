@@ -6,8 +6,20 @@
     <title>.</title>
 </head>
 <body>
-    <button onclick="window.location.href='//www.youtube.com/watch?v=o-YBDTqX_ZU&ab_channel=MusRest'"><h1>unblocked games</h1></button>
-    <img src="the-rock-look.gif">
-    <p>its nothing</p>
+    <button onclick="openPopup(),openPopup()">
+        <h1>monkey dance</h1>
+    </button>
+    <img src="the-rock-look.gif" alt="The Rock GIF">
+
+    <script>
+        function openPopup() {
+            var popupWindow = window.open('https://www.youtube.com/watch?v=o-YBDTqX_ZU&amp;ab_channel=MusRest', 'YouTube Video', 'width=600,height=400');
+            if (!popupWindow) {
+                alert('Popup blocked! Please allow pop-ups for this site and try again.');
+            }
+        }
+    </script>
+    <p>THIS IS ONLY FOR HALARIOUS RESONS</p>
+    <P>PLEASE DONT TAKE IT SERIOUSLY</P>
 </body>
 </html>
