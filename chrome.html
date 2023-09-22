@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embed Website with Fullscreen</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <input type="text" id="urlInput" style="width: 80%; padding: 5px;">
+        <button onclick="embedWebsite()">Embed</button>
+        <button onclick="toggleFullscreen()">Fullscreen</button>
+    </div>
+    <iframe id="websiteFrame" style="width: 100%; height: 80vh; border: none;"></iframe>
+
+    <script>
+        var websiteFrame = document.getElementById("websiteFrame");
+
+        function embedWebsite() {
+            var websiteUrl = document.getElementById("urlInput").value;
+            websiteFrame.src = websiteUrl;
+        }
+
+        function toggleFullscreen() {
+            if (websiteFrame.requestFullscreen) {
+                websiteFrame.requestFullscreen();
+            } else if (websiteFrame.mozRequestFullScreen) { // Firefox
+                websiteFrame.mozRequestFullScreen();
+            } else if (websiteFrame.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                websiteFrame.webkitRequestFullscreen();
+            } else if (websiteFrame.msRequestFullscreen) { // IE/Edge
+                websiteFrame.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
