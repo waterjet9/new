@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup Window Example</title>
+</head>
+<body>
+    <button onclick="openPopup()">Open Popup Window</button>
+
+    <script>
+        function openPopup() {
+            // Open an empty "about:blank" page
+            var popupWindow = window.open('about:blank', 'Popup', 'width=400, height=300');
+
+            // Check if the popup was blocked by the browser
+            if (popupWindow === null) {
+                alert('Popup blocked by the browser. Please enable popups for this site.');
+            } else {
+                // Specify the URL you want to load separately from "about:blank"
+                var targetURL = 'https://nebula.8th-grade5.repl.co';
+
+                // Create an iframe inside the popup window to load the URL
+                var iframe = popupWindow.document.createElement('iframe');
+                iframe.src = targetURL;
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                popupWindow.document.body.appendChild(iframe);
+            }
+        }
+    </script>
+</body>
+</html>
